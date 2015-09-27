@@ -6,7 +6,7 @@
   margin-right: 5px;
 }
 
-#ecm_contact_request input, #ecm_contact_request textarea {
+#ecm_contact_request div.input, #ecm_contact_request div.textarea {
   margin-bottom: 20px;
 }
 
@@ -18,8 +18,13 @@
 
 #ecm_contact_request .boolean span.error {
   margin-left: 20px;
+  display: block;
 }
 
 #ecm_contact_request label {
   font-weight: normal;
+}
+
+#ecm_contact_request span.error {
+  color: red;
 }
