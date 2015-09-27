@@ -1,0 +1,13 @@
+de:
+  mail_form:
+    models:
+      ecm/contact/request: Kontaktanfrage
+    attributes:
+      ecm/contact/request:
+        email: E-Mail
+        name: Name
+        message: Nachricht
+        phone: Telefon
+        terms_of_service: Hiermit erlaube ich dem Seitenbetreiber die Nutzung meiner Daten zwecks Beantwortung dieser Kontaktanfrage.
+    request:
+      title: Kontaktanfrage

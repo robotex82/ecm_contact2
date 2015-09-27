@@ -1,0 +1,19 @@
+en:
+  ecm:
+    contact:
+      form:
+        messages:
+          delivered: "Your contact request has been delivered."
+      request:
+        index:
+          page_title: Contact request
+          meta_description: Contact us        
+          title: Contact request
+        subject: "[%{application_name}] New contact request"
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'required'
+      mark: '*'
+
