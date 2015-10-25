@@ -1,30 +1,19 @@
-#ecm_contact_request abbr {
+#new_ecm_contact_request abbr {
   border-bottom: 0px;
 }
 
-#ecm_contact_request #ecm_contact_request_submit span.glyphicon {
+#new_ecm_contact_request #ecm_contact_request_submit span.glyphicon {
   margin-right: 5px;
 }
 
-#ecm_contact_request div.input, #ecm_contact_request div.textarea {
-  margin-bottom: 20px;
+#new_ecm_contact_request .boolean span.error {
+  margin-left: -20px;
 }
 
-#ecm_contact_request label[for=ecm_contact_request_terms_of_service] {
-  display: inline-block;
-  margin-left: 10px;
-  margin-top: -17px;
-}
-
-#ecm_contact_request .boolean span.error {
-  margin-left: 20px;
-  display: block;
-}
-
-#ecm_contact_request label {
+#new_ecm_contact_request label {
   font-weight: normal;
 }
 
-#ecm_contact_request span.error {
+#new_ecm_contact_request span.error {
   color: red;
 }

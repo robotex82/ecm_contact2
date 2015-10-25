@@ -1,9 +1,9 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe "Sending contact requests" do
-  I18n.available_locales.map(&:to_s).each do |locale|
+  %w(de en).each do |locale|
     context "I'm on the contact request page" do
-      before { visit ecm_contact_requests_url(:i18n_locale => locale) }
+      before(:each) { visit ecm_contact_requests_url(:locale => locale) }
 
       it "I should see an input for email" do
         page.should have_selector "input#ecm_contact_request_email"
@@ -28,7 +28,7 @@ describe "Sending contact requests" do
           end # before
 
           it "displays a success message" do
-            ActionMailer::Base.deliveries.size.should eq(1)
+            page.should have_content I18n.t('ecm.contact.form.messages.delivered')
           end # it
 
           it "delivers an email" do
@@ -57,16 +57,25 @@ describe "Sending contact requests" do
         end # context 'Submitting an invalid form'
 
         context 'Spam protection' do
-          before do
+          before(:each) do
             # visit "/de/kontakt"
             within 'form#new_ecm_contact_request' do
-              fill_in 'ecm_contact_request_nickname', :with => 'Spam Bot'
-              fill_in 'ecm_contact_request_name',    :with => 'John Doe'
-              fill_in 'ecm_contact_request_email',   :with => 'johndoe@example.com'
-              fill_in 'ecm_contact_request_message', :with => 'This is a test message!'
+              find("#ecm_contact_request_nickname", visible: false).set "Spam Bot"
+              # page.all("input[id=ecm_contact_request_nickname]", :visible => false).first.set("Spam Bot")
+              # fill_in 'ecm_contact_request_nickname', :with => 'Spam Bot'
+              fill_in 'ecm_contact_request_name',     :with => 'John Doe'
+              fill_in 'ecm_contact_request_email',    :with => 'johndoe@example.com'
+              fill_in 'ecm_contact_request_message',  :with => 'This is a test message!'
+              check 'ecm_contact_request_terms_of_service'
             end
             click_button :ecm_contact_request_submit
-          end # before
+          end
+
+          it "displays a success message when nickname is filled"
+
+          # it "displays a success message when nickname is filled" do
+          #   page.should have_content I18n.t('ecm.contact.form.messages.delivered')
+          # end # it
 
           it "does not send an email when nickname is filled" do
             ActionMailer::Base.deliveries.size.should eq(0)

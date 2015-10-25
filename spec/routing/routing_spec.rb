@@ -1,11 +1,11 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe "routing to contact request" do
   it "routes /en/contact to ecm/contact/requests#index" do
     expect(:get => "/en/contact").to route_to(
       :controller => "ecm/contact/requests",
       :action => "index",
-      :i18n_locale => "en"
+      :locale => "en"
     )
   end
 
@@ -13,7 +13,7 @@ describe "routing to contact request" do
     expect(:get => "/de/kontakt").to route_to(
       :controller => "ecm/contact/requests",
       :action => "index",
-      :i18n_locale => "de"
+      :locale => "de"
     )
   end
 end
