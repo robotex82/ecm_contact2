@@ -10,6 +10,9 @@ en:
           meta_description: Contact us
           title: Contact request
         subject: "[%{application_name}] New contact request"
+      views:
+        actions:
+          back: 'Back'
   routes:
     ecm_contact_requests: contact
   simple_form:

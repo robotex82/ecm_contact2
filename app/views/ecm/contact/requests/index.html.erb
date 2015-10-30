@@ -5,3 +5,7 @@
 <%= Ecm::Contact::Configuration.additional_contact_information.call(self) if Ecm::Contact::Configuration.additional_contact_information.respond_to?(:call) %>
 
 <%= render 'form' %>
+
+<div class="well page-actions">
+  <%= link_to t('ecm.contact.views.actions.back'), main_app.root_path, class: 'btn btn-default' %>
+</div>

@@ -10,7 +10,10 @@ de:
           meta_description: Kontaktieren Sie uns über unser Kontaktformular
           title: Kontaktanfrage
         subject: "[%{application_name}] Neue Kontaktanfrage"
-  routes:
+      views:
+        actions:
+          back: 'Zurück'
+    routes:
     ecm_contact_requests: kontakt
   simple_form:
     "yes": 'Ja'
@@ -18,4 +21,3 @@ de:
     required:
       text: 'Pflichtfeld'
       mark: '*'
-
