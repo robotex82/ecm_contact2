@@ -8,15 +8,25 @@ module Ecm
       def configure
         yield self
       end
-      mattr_accessor :input_name_css_classes
+      mattr_accessor :input_name_css_classes do
+         'form-control'
+      end
 
-      mattr_accessor :input_email_css_classes
+      mattr_accessor :input_email_css_classes do
+         'form-control'
+      end
 
-      mattr_accessor :input_phone_css_classes
+      mattr_accessor :input_phone_css_classes do
+         'form-control'
+      end
 
-      mattr_accessor :input_message_css_classes
+      mattr_accessor :input_message_css_classes do
+         'form-control'
+      end
 
-      mattr_accessor :input_terms_of_service_css_classes
+      mattr_accessor :input_terms_of_service_css_classes do
+         ''
+      end
 
       mattr_accessor :recipients do
         {}
@@ -24,6 +34,10 @@ module Ecm
 
       mattr_accessor :base_controller do
         'ApplicationController'
+      end
+
+      mattr_accessor :additional_contact_information do
+        nil
       end
 
       def recipients=(recipients)

@@ -52,4 +52,15 @@ Ecm::Contact.configure do |config|
   # Default: config.base_controller = 'ApplicationController'
   #
   config.base_controller = 'ApplicationController'
+
+  # Add additional information to the contact form. This will be printed
+  # between the heading and the form. You should provide a proc, or
+  # an object, that reponds to #call. The view ist provided as paramter.
+  #
+  # Example: config.additional_contact_information = lambda { |view| view.render 'additional_contact_information' }
+  #
+  # Default: config.additional_contact_information = nil
+  #
+  config.additional_contact_information = nil
 end
+
