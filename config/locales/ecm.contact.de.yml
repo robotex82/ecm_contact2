@@ -13,7 +13,7 @@ de:
       views:
         actions:
           back: 'Zurück'
-    routes:
+  routes:
     ecm_contact_requests: kontakt
   simple_form:
     "yes": 'Ja'
