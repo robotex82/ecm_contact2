@@ -12,9 +12,9 @@ Ecm::Contact.configure do |config|
   # }
   #
   config.recipients = {
-    :development => %w[ info@development.example.com ],
-    :test        => %w[ info@test.example.com ],
-    :production  => %w[ info@production.example.com ]
+    development: %w( info@development.example.com ),
+    test: %w( info@test.example.com ),
+    production: %w( info@production.example.com )
   }
 
   # Configure your input field css classes here.
@@ -63,4 +63,3 @@ Ecm::Contact.configure do |config|
   #
   config.additional_contact_information = nil
 end
-

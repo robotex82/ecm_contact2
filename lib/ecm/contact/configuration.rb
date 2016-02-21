@@ -9,23 +9,23 @@ module Ecm
         yield self
       end
       mattr_accessor :input_name_css_classes do
-         'form-control'
+        'form-control'
       end
 
       mattr_accessor :input_email_css_classes do
-         'form-control'
+        'form-control'
       end
 
       mattr_accessor :input_phone_css_classes do
-         'form-control'
+        'form-control'
       end
 
       mattr_accessor :input_message_css_classes do
-         'form-control'
+        'form-control'
       end
 
       mattr_accessor :input_terms_of_service_css_classes do
-         ''
+        ''
       end
 
       mattr_accessor :recipients do

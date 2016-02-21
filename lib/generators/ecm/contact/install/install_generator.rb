@@ -2,13 +2,13 @@ module Ecm
   module Contact
     module Generators
       class InstallGenerator < Rails::Generators::Base
-        desc "Generates the intializer"
+        desc 'Generates the intializer'
 
-        source_root File.expand_path('../templates', __FILE__) 
-        
+        source_root File.expand_path('../templates', __FILE__)
+
         def generate_initializer
-          copy_file "initializer.rb", "config/initializers/ecm_contact.rb"
-        end   
+          copy_file 'initializer.rb', 'config/initializers/ecm_contact.rb'
+        end
 
         def generate_routes
           inject_into_file 'config/routes.rb', before: "\nend" do
@@ -18,4 +18,4 @@ module Ecm
       end
     end
   end
-end        
+end
