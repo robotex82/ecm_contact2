@@ -1,4 +1,12 @@
-<%= simple_form_for(@contact_request) do |f| %>
+<% if notice %>
+  <div class="alert alert-success alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <%= notice %>
+  </div>
+<% end %>
+<%= simple_form_for(@contact_request, form_tag_options) do |f| %>
   <%= f.input :nickname, :input_html => { :style => 'display:none' }, :label_html => { :style => 'display:none' } %>
   <%= f.input :name, :input_html => { :class => Ecm::Contact::Configuration.input_name_css_classes } %>
   <%= f.input :email, :input_html => { :class => Ecm::Contact::Configuration.input_email_css_classes } %>
@@ -6,10 +14,10 @@
   <%= f.input :message, :as => :text, :input_html => { :class => Ecm::Contact::Configuration.input_message_css_classes } %>
   <%= f.input :terms_of_service, :as => :boolean, :required => true, :input_html => { :class => Ecm::Contact::Configuration.input_terms_of_service_css_classes } %>
 
-  <div class="controls form-actions well">
+  <div class="<%= Ecm::Contact::Configuration.form_actions_wrapper_css_classes %>">
     <%= button_tag(:type => 'submit', :class => 'input btn btn-primary', :id => 'ecm_contact_request_submit') do %>
       <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-      <%= t('helpers.submit.create', :model => f.object.class.model_name.human) %>
+      <%= t('.submit', :model => f.object.class.model_name.human) %>
     <% end %>
   </div>
 <% end %>

@@ -10,6 +10,9 @@ de:
           meta_description: Kontaktieren Sie uns über unser Kontaktformular
           title: Kontaktanfrage
         subject: "[%{application_name}] Neue Kontaktanfrage"
+      requests:
+        form:
+          submit: Abschicken
       views:
         actions:
           back: 'Zurück'
@@ -21,3 +24,9 @@ de:
     required:
       text: 'Pflichtfeld'
       mark: '*'
+    placeholders:
+      ecm_contact_request:
+        name: "Max Mustermann"
+        email: "max.mustermann@example.com"
+        message: "Hi Dave..."
+        phone: "+49 69 12345678"

@@ -28,6 +28,10 @@ module Ecm
         ''
       end
 
+      mattr_accessor :form_actions_wrapper_css_classes do
+        'controls form-actions well'
+      end
+
       mattr_accessor :recipients do
         {}
       end
@@ -38,6 +42,10 @@ module Ecm
 
       mattr_accessor :additional_contact_information do
         nil
+      end
+
+      mattr_accessor :after_create_url do
+        ->(controller) { controller.url_for(action: index) }
       end
 
       def recipients=(recipients)
