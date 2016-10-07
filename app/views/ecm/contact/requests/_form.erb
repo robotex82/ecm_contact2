@@ -6,7 +6,7 @@
     <%= notice %>
   </div>
 <% end %>
-<%= simple_form_for(@contact_request, form_tag_options) do |f| %>
+<%= simple_form_for(@contact_request) do |f| %>
   <%= f.input :nickname, :input_html => { :style => 'display:none' }, :label_html => { :style => 'display:none' } %>
   <%= f.input :name, :input_html => { :class => Ecm::Contact::Configuration.input_name_css_classes } %>
   <%= f.input :email, :input_html => { :class => Ecm::Contact::Configuration.input_email_css_classes } %>
