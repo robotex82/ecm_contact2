@@ -20,7 +20,8 @@ module Ecm
           subject: proc { I18n.t('ecm.contact.request.subject', application_name: Rails.application.class.to_s.split('::').first) }.call,
           # :to => I18n.t('ecm.contact.request.recipients'),
           to: Ecm::Contact::Configuration.recipients[Rails.env],
-          from: %("#{name}" <#{email}>)
+          # from: %("#{name}" <#{email}>)
+          from: Ecm::Contact::Configuration.sender.call(self)
         }
       end
     end

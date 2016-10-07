@@ -74,4 +74,10 @@ Ecm::Contact.configure do |config|
   # default: config.after_create_url = ->(controller) { controller.url_for(action: index) }
   # 
   config.after_create_url = ->(controller) { controller.url_for(action: index) }
+
+  # Set the sender address.
+  # 
+  # default: config.sender = ->(mail_form) { %("#{mail_form.name}" <#{mail_form.email}>) }
+  # 
+  config.sender = ->(mail_form) { %("#{mail_form.name}" <#{mail_form.email}>) }
 end

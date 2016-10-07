@@ -36,6 +36,10 @@ module Ecm
         {}
       end
 
+      mattr_accessor :sender do
+        ->(mail_form) { %("#{mail_form.name}" <#{mail_form.email}>) }
+      end
+
       mattr_accessor :base_controller do
         'ApplicationController'
       end
