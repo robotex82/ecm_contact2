@@ -4,20 +4,20 @@ de:
       form:
         messages:
           delivered: "Ihre Kontaktanfrage wurde versandt."
-      request:
+      contact_request:
         index:
           page_title: Kontaktanfrage
           meta_description: Kontaktieren Sie uns über unser Kontaktformular
           title: Kontaktanfrage
         subject: "[%{application_name}] Neue Kontaktanfrage"
-      requests:
+      contact_requests:
         form:
           submit: Abschicken
       views:
         actions:
           back: 'Zurück'
   routes:
-    ecm_contact_requests: kontakt
+    contact_requests: kontakt
   simple_form:
     "yes": 'Ja'
     "no": 'Nein'
@@ -25,7 +25,7 @@ de:
       text: 'Pflichtfeld'
       mark: '*'
     placeholders:
-      ecm_contact_request:
+      contact_request:
         name: "Max Mustermann"
         email: "max.mustermann@example.com"
         message: "Hi Dave..."

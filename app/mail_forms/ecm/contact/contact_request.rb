@@ -1,6 +1,6 @@
 module Ecm
   module Contact
-    class Request < MailForm::Base
+    class ContactRequest < MailForm::Base
       attribute :name
       attribute :email
       attribute :phone

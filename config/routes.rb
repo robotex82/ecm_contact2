@@ -1,3 +1,5 @@
 Ecm::Contact::Engine.routes.draw do
-  resources :contact_requests, only: [:create, :new]
+  localized do
+    resources :contact_requests, only: [:create, :index]
+  end
 end

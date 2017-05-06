@@ -4,20 +4,20 @@ en:
       form:
         messages:
           delivered: "Your contact request has been delivered."
-      request:
+      contact_request:
         index:
           page_title: Contact request
           meta_description: Contact us
           title: Contact request
         subject: "[%{application_name}] New contact request"
-      requests:
+      contact_requests:
         form:
           submit: Submit
       views:
         actions:
           back: 'Back'
   routes:
-    ecm_contact_requests: contact
+    contact_requests: contact
   simple_form:
     "yes": 'Yes'
     "no": 'No'
@@ -25,7 +25,7 @@ en:
       text: 'required'
       mark: '*'
     placeholders:
-      ecm_contact_request:
+      contact_request:
         name: "John Doe"
         email: "john.doe@example.com"
         message: "Hi Dave..."
