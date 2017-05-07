@@ -17,7 +17,8 @@ en:
         actions:
           back: 'Back'
   routes:
-    contact_requests: contact
+    ecm_contact: contact
+    contact_requests: request
   simple_form:
     "yes": 'Yes'
     "no": 'No'
