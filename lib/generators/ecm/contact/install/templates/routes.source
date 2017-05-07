@@ -1,5 +1,2 @@
   
-  # ECM Contact Frontend Routing
-  localized do
-    Ecm::Contact::Routing.routes(self)
-  end
+  mount Ecm::Contact::Engine, at: '/'
