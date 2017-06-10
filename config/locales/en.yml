@@ -17,7 +17,8 @@ en:
         actions:
           back: 'Back'
   routes:
-    ecm_contact: contact
+    ecm_contact_engine: contact
+    # ecm_contact: contact
     contact_requests: request
   simple_form:
     "yes": 'Yes'
@@ -31,3 +32,15 @@ en:
         email: "john.doe@example.com"
         message: "Hi Dave..."
         phone: "+1-541-754-3010"
+  mail_form:
+    models:
+      ecm/contact/contact_request: contact request
+    attributes:
+      ecm/contact/contact_request:
+        email: email
+        name: name
+        message: message
+        phone: phone
+        terms_of_service: I hereby allow the site owner to use my personal data for the purpose of answering this request.
+    contact_request:
+      title: contact request

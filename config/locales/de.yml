@@ -17,7 +17,8 @@ de:
         actions:
           back: 'Zurück'
   routes:
-    ecm_contact: kontakt
+    ecm_contact_engine: kontakt
+    # ecm_contact: kontakt
     contact_requests: anfrage
   simple_form:
     "yes": 'Ja'
@@ -31,3 +32,15 @@ de:
         email: "max.mustermann@example.com"
         message: "Hi Dave..."
         phone: "+49 69 12345678"
+  mail_form:
+    models:
+      ecm/contact/contact_request: Kontaktanfrage
+    attributes:
+      ecm/contact/contact_request:
+        email: E-Mail
+        name: Name
+        message: Nachricht
+        phone: Telefon
+        terms_of_service: Hiermit erlaube ich dem Seitenbetreiber die Nutzung meiner Daten zwecks Beantwortung dieser Kontaktanfrage.
+    contact_request:
+      title: "Kontaktanfrage"
