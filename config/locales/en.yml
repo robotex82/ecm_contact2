@@ -9,10 +9,11 @@ en:
           page_title: Contact request
           meta_description: Contact us
           title: Contact request
-        subject: "[%{application_name}] New contact request"
       contact_requests:
         form:
           submit: Submit
+      request:
+        subject: "[%{application_name}] New contact request"
       views:
         actions:
           back: 'Back'

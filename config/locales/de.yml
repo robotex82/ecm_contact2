@@ -9,10 +9,11 @@ de:
           page_title: Kontaktanfrage
           meta_description: Kontaktieren Sie uns über unser Kontaktformular
           title: Kontaktanfrage
-        subject: "[%{application_name}] Neue Kontaktanfrage"
       contact_requests:
         form:
           submit: Abschicken
+      request:
+        subject: "[%{application_name}] Neue Kontaktanfrage"
       views:
         actions:
           back: 'Zurück'

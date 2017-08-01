@@ -8,7 +8,7 @@ module Ecm
 
       def create
         @title = I18n.t('ecm.contact.request.index.title')
-        @contact_request = ContactRequest.new(params[:contact_request])
+        @contact_request = ContactRequest.new(permitted_params)
 
         if @contact_request.deliver
           redirect_to(after_create_url, notice: -> { I18n.t('ecm.contact.form.messages.delivered') }.call)
@@ -18,6 +18,10 @@ module Ecm
       end
 
       private
+
+      def permitted_params
+        params.require(:contact_request).permit(:nickname, :name, :email, :phone, :message, :terms_of_service)
+      end
 
       def after_create_url
         Ecm::Contact::Configuration.after_create_url.call(self)
