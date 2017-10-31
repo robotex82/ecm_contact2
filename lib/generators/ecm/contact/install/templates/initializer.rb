@@ -6,15 +6,15 @@ Ecm::Contact.configure do |config|
   # Default:
   #
   # config.recipients = {
-  #   :development => %w[ info@development.example.com ],
-  #   :test        => %w[ info@test.example.com ],
-  #   :production  => %w[ info@production.example.com ]
+  #   development: %w( info@development.example.com ),
+  #   test:        %w( info@test.example.com ),
+  #   production:  %w( info@production.example.com )
   # }
   #
   config.recipients = {
     development: %w( info@development.example.com ),
-    test: %w( info@test.example.com ),
-    production: %w( info@production.example.com )
+    test:        %w( info@test.example.com ),
+    production:  %w( info@production.example.com )
   }
 
   # Configure your input field css classes here.
@@ -71,9 +71,9 @@ Ecm::Contact.configure do |config|
 
   # url to redirect to after successful contact request.
   # 
-  # default: config.after_create_url = ->(controller) { controller.url_for(action: index) }
+  # default: config.after_create_url = ->(controller) { controller.url_for(action: :index) }
   # 
-  config.after_create_url = ->(controller) { controller.url_for(action: index) }
+  config.after_create_url = ->(controller) { controller.url_for(action: :index) }
 
   # Set the sender address.
   # 

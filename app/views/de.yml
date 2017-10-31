@@ -1,0 +1,47 @@
+de:
+  ecm:
+    contact:
+      form:
+        messages:
+          delivered: "Ihre Kontaktanfrage wurde versandt."
+      contact_request:
+        index:
+          page_title: Kontaktanfrage
+          meta_description: Kontaktieren Sie uns über unser Kontaktformular
+          title: Kontaktanfrage
+      contact_requests:
+        form:
+          submit: Abschicken
+      request:
+        subject: "[%{application_name}] Neue Kontaktanfrage"
+      views:
+        actions:
+          back: 'Zurück'
+  routes:
+    ecm_contact_engine: kontakt
+    # ecm_contact: kontakt
+    contact_requests: anfrage
+  simple_form:
+    "yes": 'Ja'
+    "no": 'Nein'
+    required:
+      text: 'Pflichtfeld'
+      mark: '*'
+    placeholders:
+      contact_request:
+        name: "Max Mustermann"
+        email: "max.mustermann@example.com"
+        message: "Hi Dave..."
+        phone: "+49 69 12345678"
+  mail_form:
+    models:
+      ecm/contact/contact_request: Kontaktanfrage
+    attributes:
+      ecm/contact/contact_request:
+        email: E-Mail
+        name: Name
+        message: Nachricht
+        phone: Telefon
+        accept_terms_of_service: Hiermit erlaube ich dem Seitenbetreiber die Nutzung meiner Daten zwecks Beantwortung dieser Kontaktanfrage.
+    contact_request:
+      title: "Kontaktanfrage"

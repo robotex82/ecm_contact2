@@ -1,47 +1,49 @@
 de:
+  classes:
+    ecm/contact/engine: Kontakt
+  activerecord:
+    models:
+      ecm/contact/contact_request:
+        one: Kontaktanfrage
+        other: Kontaktanfragen
+    attributes:
+      ecm/contact/contact_request:
+        accept_terms_of_service: 'Hiermit erlaube ich dem Seitenbetreiber die Nutzung meiner Daten zwecks Beantwortung dieser Kontaktanfrage.'
+        name: Name
+        email: E-Mail
+        phone: Telefonnummer
+        ip_address: IP Adresse
+        message: Nachricht
+        notified_at: Benachrichtigt am
+        created_at: Erstellt am
+        updated_at: Aktualisiert am
+        additional_actions: Zusatzliche Aktionen
   ecm:
     contact:
-      form:
-        messages:
-          delivered: "Ihre Kontaktanfrage wurde versandt."
-      contact_request:
-        index:
-          page_title: Kontaktanfrage
-          meta_description: Kontaktieren Sie uns über unser Kontaktformular
-          title: Kontaktanfrage
       contact_requests:
-        form:
-          submit: Abschicken
-      request:
-        subject: "[%{application_name}] Neue Kontaktanfrage"
-      views:
-        actions:
-          back: 'Zurück'
+        new:
+          title: "Kontaktanfrage"
+      contact_request_mailer:
+        notify:
+          subject: "[%{application_name}] Neue Kontaktanfrage"
+          title: "Neue Kontaktanfrage"
+  flash:
+    ecm:
+      contact:
+        contact_requests:
+          create:
+            notice: "Ihre Kontaktanfrage wurde versandt."
+  helpers:
+    submit:
+      contact_request:
+        create: Absenden
   routes:
     ecm_contact_engine: kontakt
-    # ecm_contact: kontakt
     contact_requests: anfrage
   simple_form:
-    "yes": 'Ja'
-    "no": 'Nein'
-    required:
-      text: 'Pflichtfeld'
-      mark: '*'
     placeholders:
       contact_request:
         name: "Max Mustermann"
         email: "max.mustermann@example.com"
-        message: "Hi Dave..."
+        message: "Meine Nachricht"
         phone: "+49 69 12345678"
-  mail_form:
-    models:
-      ecm/contact/contact_request: Kontaktanfrage
-    attributes:
-      ecm/contact/contact_request:
-        email: E-Mail
-        name: Name
-        message: Nachricht
-        phone: Telefon
-        terms_of_service: Hiermit erlaube ich dem Seitenbetreiber die Nutzung meiner Daten zwecks Beantwortung dieser Kontaktanfrage.
-    contact_request:
-      title: "Kontaktanfrage"

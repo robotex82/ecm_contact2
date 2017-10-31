@@ -6,15 +6,15 @@ Ecm::Contact.configure do |config|
   # Default:
   #
   # config.recipients = {
-  #   :development => %w[ info@development.example.com ],
-  #   :test        => %w[ info@test.example.com ],
-  #   :production  => %w[ info@production.example.com ]
+  #   development: %w( info@development.example.com ),
+  #   test:        %w( info@test.example.com ),
+  #   production:  %w( info@production.example.com )
   # }
   #
   config.recipients = {
     development: %w( info@development.example.com ),
-    test: %w( info@test.example.com ),
-    production: %w( info@production.example.com )
+    test:        %w( info@test.example.com ),
+    production:  %w( info@production.example.com )
   }
 
   # Configure your input field css classes here.
@@ -47,6 +47,12 @@ Ecm::Contact.configure do |config|
   #
   config.input_terms_of_service_css_classes = ''
 
+  # Configure your form action wrapper div css classes here.
+  #
+  # Default: config.form_actions_wrapper_css_classes = 'controls form-actions well'
+  #
+  config.form_actions_wrapper_css_classes = 'controls form-actions well'
+
   # set the base controller for the contact form
   #
   # Default: config.base_controller = 'ApplicationController'
@@ -62,4 +68,16 @@ Ecm::Contact.configure do |config|
   # Default: config.additional_contact_information = nil
   #
   config.additional_contact_information = nil
+
+  # url to redirect to after successful contact request.
+  # 
+  # default: config.after_create_url = ->(controller) { controller.url_for(action: :index) }
+  # 
+  config.after_create_url = ->(controller) { controller.url_for(action: :index) }
+
+  # Set the sender address.
+  # 
+  # default: config.sender = ->(mail_form) { %("#{mail_form.name}" <#{mail_form.email}>) }
+  # 
+  config.sender = ->(mail_form) { %("#{mail_form.name}" <#{mail_form.email}>) }
 end

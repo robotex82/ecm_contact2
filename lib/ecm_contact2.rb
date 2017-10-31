@@ -1,8 +1,7 @@
-require 'mail_form'
-require 'simple_form'
+require "route_translator"
 
-require 'ecm/contact/engine'
-require 'ecm/contact/configuration'
+require "ecm/contact/configuration"
+require "ecm/contact/engine"
 
 module Ecm
   module Contact
