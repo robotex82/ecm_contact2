@@ -55,9 +55,9 @@ Ecm::Contact.configure do |config|
 
   # set the base controller for the contact form
   #
-  # Default: config.base_controller = 'ApplicationController'
+  # Default: config.base_controller = '<%= base_controller_class_name %>'
   #
-  config.base_controller = 'ApplicationController'
+  config.base_controller = '<%= base_controller_class_name %>'
 
   # Add additional information to the contact form. This will be printed
   # between the heading and the form. You should provide a proc, or
