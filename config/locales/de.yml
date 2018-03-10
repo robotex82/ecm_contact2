@@ -8,6 +8,7 @@ de:
         other: Kontaktanfragen
     attributes:
       ecm/contact/contact_request:
+        id: ID
         accept_terms_of_service: 'Hiermit erlaube ich dem Seitenbetreiber die Nutzung meiner Daten zwecks Beantwortung dieser Kontaktanfrage.'
         name: Name
         email: E-Mail
