@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = "Ecm Contact Module."
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  s.files = Dir["{app,config,db,lib,spec}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", ">= 5.1.1"
   s.add_dependency "route_translator"
