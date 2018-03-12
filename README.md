@@ -21,6 +21,10 @@ Or install it yourself as:
 $ gem install ecm_contact
 ```
 
+## Configuration
+
+You can use the environment variable ECM_CONTACT_RECIPIENTS to override the recipients in config/initializers/ecm_contact.rb
+
 ## Contributing
 Contribution directions go here.
 

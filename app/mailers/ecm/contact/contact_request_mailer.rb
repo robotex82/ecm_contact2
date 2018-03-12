@@ -25,7 +25,7 @@ module Ecm::Contact
     end
 
     def notification_recipients
-      Ecm::Contact::Configuration.recipients[Rails.env]
+      ENV.fetch('ECM_CONTACT_RECIPIENTS') { Ecm::Contact::Configuration.recipients[Rails.env] }
     end
   end
 end
