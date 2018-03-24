@@ -49,7 +49,7 @@ module Ecm
       end
 
       mattr_accessor :after_create_url do
-        ->(controller) { controller.url_for(action: index) }
+        ->(controller) { controller.root_path }
       end
 
       def recipients=(recipients)

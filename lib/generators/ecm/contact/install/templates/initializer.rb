@@ -61,7 +61,7 @@ Ecm::Contact.configure do |config|
 
   # Add additional information to the contact form. This will be printed
   # between the heading and the form. You should provide a proc, or
-  # an object, that reponds to #call. The view ist provided as paramter.
+  # an object, that reponds to #call. The view ist provided as parameter.
   #
   # Example: config.additional_contact_information = lambda { |view| view.render 'additional_contact_information' }
   #
@@ -71,9 +71,9 @@ Ecm::Contact.configure do |config|
 
   # url to redirect to after successful contact request.
   # 
-  # default: config.after_create_url = ->(controller) { controller.url_for(action: :index) }
+  # default: config.after_create_url = ->(controller) { controller.root_path }
   # 
-  config.after_create_url = ->(controller) { controller.url_for(action: :index) }
+  config.after_create_url = ->(controller) { controller.root_path }
 
   # Set the sender address.
   # 
